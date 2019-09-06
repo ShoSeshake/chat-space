@@ -1,17 +1,16 @@
-.flash-box
-  .notice system_message
 .wrapper
   .chat-side
     .side-header
       .side-header__box
-        %p.side-header__box__user-name current_user.name
+        %p.side-header__box__user-name 
+          = current_user.name
         %ul.side-header__box__menu
           %li.side-header__box__menu__new-group
-            = link_to "#", class: "icon" do
-              %i.fa.fa-edit            
+            = link_to do
+              = fa_icon 'pencil-square-o', class: 'icon'
           %li.side-header__box__menu__edit-user
-            = link_to "#", class: "icon" do
-              %i.fa.fa-cog
+            = link_to edit_user_path(current_user) do
+              = fa_icon 'cog', class: 'icon'
     .groups
       = link_to "#", class: 'groups__link' do
         .group

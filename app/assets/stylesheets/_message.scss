@@ -2,16 +2,6 @@
  box-sizing: border-box;
 }
 
-.flash-box {
-  width: 100vw;
-  text-align: center;
-  color: $white;
-}
-.notice {
-  background-color: $skyblue;
-}
-
-
 .chat-side {
   float: left;
   height: 100vh;
@@ -21,7 +11,7 @@
 .side-header {
   width: 300px;
   height: 100px;
-  background-color: #253141;
+  background-color: $side_blue_dark;
   display: flex; 
   padding: 0 20px;
   &__box {
@@ -48,7 +38,7 @@
 
 
 .groups {
-  background-color: #2f3e51;
+  background-color: $side_blue_dark;
   padding: 0 20px;
   height: $height-btm;
   &__link {
@@ -95,18 +85,18 @@
     &__member-list {
       display: flex;
       font-size: 12px;
-      color: #999999;
+      color: $light_gray;
     }
   }
   &__edit {
-    color: $skyblue;
+    color: $light_blue;
     text-decoration: none;
   }
   &__edit-btn {
     padding: 0 20px;
     margin-top: 28px;
     position: absolute;
-    border: 1px solid $skyblue;
+    border: 1px solid $light_blue;
     height: 40px;
     line-height: 40px;
     right: 40px;
@@ -127,16 +117,16 @@
       float: left;
       font-size: 16px;
       font-weight: bold;
-      color: $textblack;
+      color: $black;
     }
     &__date {
       font-size: 12px;
-      color: #999999;
+      color: $light_gray;
     }
   }
   &__text {
     font-size: 14px;
-    color: $textblack;
+    color: $black;
   }
 }
 
@@ -158,7 +148,7 @@
     height: 50px;
     width: 100%;
     font-size: 16px;
-    color: $textblack;
+    color: $black;
   }
   &__image{
     position: absolute;
@@ -171,7 +161,7 @@
   }
 }
 .submit-btn {
-  background-color: $skyblue;
+  background-color: $light_blue;
   color: $white;
   height: 50px;
   margin-left: 15px;
