@@ -7,13 +7,13 @@
         %p.side-header__box__user-name current_user.name
         %ul.side-header__box__menu
           %li.side-header__box__menu__new-group
-            %a{href: "/groups/new"}
+            = link_to "#", class: "icon" do
               %i.fa.fa-edit            
           %li.side-header__box__menu__edit-user
-            %a{href: "/users/user_id/edit"}
+            = link_to "#", class: "icon" do
               %i.fa.fa-cog
     .groups
-      %a{href: "/groups/group_id/messages"}
+      = link_to "#", class: 'groups__link' do
         .group
           %p.group__group-name group.name
           %p.group__latest-message group.message

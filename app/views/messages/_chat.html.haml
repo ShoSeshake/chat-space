@@ -6,7 +6,7 @@
       %ul.main-header__left-box__member-list
         Member：
         %li.main-header__left-box__member-list__member name
-    %a{href: "/groups/group_id/edit"}
+    = link_to "#", class: 'main-header__edit' do
       .main-header__edit-btn Edit
   .messages
     .message
@@ -15,7 +15,7 @@
         %p.message__upper-info__date message.created_at
       %p.message__text message.text
   .form
-    %form#new_message.new_message{action: "/groups/group_id/messages", enctype: "multipart/form-data"}
+    %form#new_message.new_message{action: "#", enctype: "multipart/form-data"}
       .input-box
         %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}
         %label.input-box__image{for: "message_image"}

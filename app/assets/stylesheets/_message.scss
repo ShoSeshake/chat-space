@@ -39,18 +39,19 @@
       &__new-group {
         margin-right: 5px;
       }
-      a {
-          color: $white;
-      }
+      .icon {
+        color: $white;
+    }
     }
   }
 }
+
 
 .groups {
   background-color: #2f3e51;
   padding: 0 20px;
   height: $height-btm;
-  a {
+  &__link {
     text-decoration: none;
   }
 }
@@ -97,7 +98,7 @@
       color: #999999;
     }
   }
-  a {
+  &__edit {
     color: $skyblue;
     text-decoration: none;
   }
@@ -160,7 +161,6 @@
     color: $textblack;
   }
   &__image{
-    display: inline-block;
     position: absolute;
     top: 10px;
     right: 10px;
