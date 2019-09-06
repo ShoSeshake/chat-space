@@ -1,24 +1,24 @@
 .chat-main
   .main-header
     .main-header__left-box
-      %h2.main-header__left-box__current-group{"data-group_id"=> "group.id"}
+      %h2.main-header__left-box__current-group
         group.name
       %ul.main-header__left-box__member-list
         Member：
         %li.main-header__left-box__member-list__member name
-    %a{:href => "/groups/group_id/edit"}
+    %a{href: "/groups/group_id/edit"}
       .main-header__edit-btn Edit
   .messages
-    .message{"data-message_id" => "message.id"}
+    .message
       .message__upper-info
         %p.message__upper-info__talker message.user.name
         %p.message__upper-info__date message.created_at
       %p.message__text message.text
   .form
-    %form#new_message.new_message{:action => "/groups/group_id/messages", :enctype => "multipart/form-data"}
+    %form#new_message.new_message{action: "/groups/group_id/messages", enctype: "multipart/form-data"}
       .input-box
-        %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}
-        %label.input-box__image{:for => "message_image"}
+        %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}
+        %label.input-box__image{for: "message_image"}
           %i.fa.fa-image
-          %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}
-      %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}
+          %input#message_image.input-box__image__file{name: "message[image]", type: "file"}
+      %input.submit-btn{name: "commit", type: "submit", value: "Send"}
