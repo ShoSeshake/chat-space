@@ -124,9 +124,39 @@
       color: $light_gray;
     }
   }
-  &__text {
+  &__content {
     font-size: 14px;
     color: $black;
+  }
+}
+
+.messages {
+  background-color: #FAFAFA;
+  box-sizing: border-box;
+  padding: 46px 40px 0;
+  height: calc(100% - 100px - 90px);
+  .message {
+    &upper-info {
+      display: flex;
+      &__talker {
+        color: $black;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      &__date {
+        color: $light_gray;
+        font-size: 12px;
+        padding-left: 10px;
+      }
+    }
+    .message_content {
+      margin-top: 10px;
+      &__text {
+        color: $black;
+        font-size: 14px;
+        margin-bottom: 40px;
+      }
+    }
   }
 }
 
@@ -136,7 +166,13 @@
   background-color: #dddddd;
   padding: 20px 40px;
   position: fixed;
-  bottom: 0; 
+  bottom: 0;
+  input {
+    height: 50px;
+    width: 100%;
+    font-size: 16px;
+    color: $black;
+  } 
 }
 .new_message {
   display: flex;
@@ -144,12 +180,6 @@
 .input-box {
   position: relative;
   width: 100%;
-  &__text {
-    height: 50px;
-    width: 100%;
-    font-size: 16px;
-    color: $black;
-  }
   &__image{
     position: absolute;
     top: 10px;
