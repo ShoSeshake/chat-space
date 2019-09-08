@@ -13,8 +13,8 @@
   .groups
     .group
       - current_user.groups.each do |group|
-        = link_to "#", class: 'groups__link' do
+        = link_to group_messages_path(group), {class: 'groups__link'} do
           %p.group__group-name 
             = group.name
           %p.group__latest-message
-            nothing
+            = group.show_last_message
