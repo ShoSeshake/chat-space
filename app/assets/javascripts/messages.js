@@ -36,12 +36,11 @@ $(function() {
     .done(function(data) {
       var html = buildHTML(data);
       $('.messages').append(html);
-      $('#message_content').val('');
-      $('#message_image').val('');
+      $('form').reset();
       scroll(data)
     })
     .fail(function() {
-      alert('error');
+      alert('メッセージ、または画像を入力してください');
     });
   });
 });
