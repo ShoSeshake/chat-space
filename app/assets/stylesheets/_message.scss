@@ -38,7 +38,7 @@
 
 
 .groups {
-  background-color: $side_blue_dark;
+  background-color: $side_blue_light;
   padding: 0 20px;
   height: $height-btm;
   &__link {
@@ -108,6 +108,7 @@
   box-sizing: border-box;
   padding: 46px 40px 0;
   height: calc(100% - 190px);
+  overflow: scroll;
   .message {
     .upper-message {
       display: flex;
@@ -128,6 +129,10 @@
         color: $black;
         font-size: 14px;
         margin-bottom: 40px;
+      }
+      &__image {
+        height: 200px;
+        width: auto;
       }
     }
   }
