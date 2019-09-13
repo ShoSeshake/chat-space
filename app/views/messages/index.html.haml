@@ -4,11 +4,13 @@
     .main-header
       .main-header__left-box
         %h2.main-header__left-box__current-group
-          group.name
+          = @group.name
         %ul.main-header__left-box__member-list
           Member：
-          %li.main-header__left-box__member-list__member name
-      = link_to "/groups/1/edit", class: 'main-header__edit' do
+          -@group.users.each do |user|
+            %li.main-header__left-box__member-list__member
+              =user.name
+      = link_to edit_group_path(@group), class: 'main-header__edit' do
         .main-header__edit-btn Edit
     .messages
       = render @messages
