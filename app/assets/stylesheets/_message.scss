@@ -87,6 +87,9 @@
       display: flex;
       font-size: 12px;
       color: $light_gray;
+      li{
+        margin-right: 5px;
+      }
     }
   }
   &__edit {
