@@ -1,53 +1,23 @@
 $(function() {
     var buildHTML = function(message) {
-      if (message.content && message.image.url) {
-        var html = `<div class="message" data-id= ${message.id} >
-                      <div class="upper-message">
-                        <div class="upper-message__user-name">
-                        ${message.user_name}
-                        </div>
-                        <div class="upper-message__date">
-                        ${message.created_at}
-                        </div>
+      var content = message.content ? `${ message.content }` : "";
+      var img = message.image.url ? `<img class="lower-message__image" src= ${ message.image.url }>` : "";
+      var html = `<div class='message' data-id= ${message.id}>
+                    <div class='upper-message'>
+                      <div class='upper-message__user-name'>
+                       ${message.user_name}
                       </div>
-                      <div class="lower-message">
-                        <p class="lower-message__content">
-                        ${message.content}
-                        </p>
-                        <img src=" ${message.image.url} " class="lower-message__image" >
+                      <div class='upper-message__date'>
+                       ${message.created_at}
                       </div>
-                    </div>`
-      } else if (message.content) {
-        var html = `<div class="message" data-id= ${message.id} >
-                      <div class="upper-message">
-                        <div class="upper-message__user-name">
-                        ${message.user_name}
-                        </div>
-                        <div class="upper-message__date">
-                        ${message.created_at}
-                        </div>
-                      </div>
-                      <div class="lower-message">
-                        <p class="lower-message__content">
-                        ${message.content}
-                        </p>
-                      </div>
-                    </div>`
-      } else if (message.image.url) {
-        var html = `<div class="message" data-id= ${message.id} >
-                      <div class="upper-message">
-                        <div class="upper-message__user-name">
-                        ${message.user_name}
-                        </div>
-                        <div class="upper-message__date">
-                        ${message.created_at}
-                        </div>
-                      </div>
-                      <div class="lower-message">
-                        <img src=" ${message.image.url} " class="lower-message__image" >
-                      </div>
-                    </div>`
-                  };
+                    </div>
+                    <div class='lower-message'>
+                      <p class='lower-message__content'>
+                        ${content}
+                      </p>
+                      ${img}
+                    </div>
+                  </div>`
       return html;
     };
   function scroll() {
