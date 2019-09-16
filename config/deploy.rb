@@ -1,9 +1,9 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.11.1"
+lock "3.11.1"
 # Capistranoのログの表示に利用する
-set :application, "chat-space"
+set :application, 'chat-space'
 # どのリポジトリからアプリをpullするかを指定する
-set :repo_url,  'git@github.com:ShoSeshake/cha-space.git'
+set :repo_url,  'git@github.com:ShoSeshake/chat-space.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
