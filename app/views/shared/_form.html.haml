@@ -7,12 +7,12 @@
           %li= message
   .chat-group-form__field
     .chat-group-form__field--left
-      = f.label :'グループ名', class: 'chat-group-form__label'
+      = f.label :'グループ名', class: 'chat-group-form__label', for: "group_name"
     .chat-group-form__field--right
       = f.text_field :name, class: 'chat-group-form__input', placeholder: 'グループ名を入力してください', autocomplete: "off"
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
-      =f.label :'チャットメンバーを追加', class: 'chat-group-form__label'
+      =f.label :'チャットメンバーを追加', class: 'chat-group-form__label', for: "user-search-field"
     .chat-group-form__field--right
       .chat-group-form__search.clearfix
         = f.text_field :keyword, class: 'chat-group-form__input', id: 'user-search-field', placeholder: '追加したいユーザー名を入力してください', value: '', autocomplete: "off"

@@ -20,6 +20,7 @@ $(function() {
                   </div>`
       return html;
     };
+
   function scroll() {
     $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
   }

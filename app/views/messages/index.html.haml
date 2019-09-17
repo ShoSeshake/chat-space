@@ -16,8 +16,8 @@
       = render @messages
     .form
       = form_for [@group, @message], method: :post do |f|
-        = f.text_field :content, class: 'form__message', placeholder: 'type a message', autocomplete: "off"
         .form__mask
+          = f.text_field :content, class: 'form__message', placeholder: 'type a message', autocomplete: "off"
           = f.label :image, class: 'form__mask__image' do
             = fa_icon 'picture-o', class: 'icon'
             = f.file_field :image, class: 'hidden'
