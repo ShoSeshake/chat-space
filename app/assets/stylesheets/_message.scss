@@ -113,6 +113,7 @@
   height: calc(100% - 190px);
   overflow: scroll;
   .message {
+    margin-bottom: 40px;
     .upper-message {
       display: flex;
       &__user-name {
@@ -132,6 +133,7 @@
       &__content {
         color: $black;
         font-size: 14px;
+        margin-bottom: 10px;
       }
       &__image {
         height: 200px;
